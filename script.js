@@ -1,9 +1,18 @@
 $('.dropdown').hide();
+$('.projects-dropdown').hide();
 $('.thide').hide();
 $('#continue-read').hide();
+$('#projects').hover(function(){
+	console.log("foo");
+	$('.projects-dropdown').slideDown();
+});
 $('.hero').click(function(){
 	$('.dropdown').slideUp();
 	$("#mobile-menu").toggleClass("fa-bars fa-times");
+	$('.projects-dropdown').slideUp();
+});
+$('.es-hero').hover(function(){
+	$('.projects-dropdown').slideUp();
 });
 $('#mobile-menu').click(function(){
 	$('.dropdown').slideToggle();
